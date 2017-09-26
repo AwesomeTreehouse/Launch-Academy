@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grocery List? Yes!</title>
+  </head>
+
+  <body>
+    <h1>Hot Damn! A Grocery List!</h1>
+
+    <ul>
+      <% @food_items.each do |food| %>
+        <li> <%= food["name"] %> </li>
+      <% end %>
+    </ul>
+
+    <form action="/grocery-list" method="POST">
+      <label for="name">Name:</label>
+      <input type='text' id="name" name="name">
+      <br>
+      <br>
+      <input type="submit" value="Add"/>
+    </form>
+
+  </body>
+</html>
