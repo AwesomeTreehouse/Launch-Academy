@@ -1,7 +1,0 @@
----
-title: "Lost Dog Collars"
-type: "exercise"
-description: "Write SQL Joins that satisfy requirements."
-tags: "evening-exercise, sql"
-ignore:
-- "lost-dog-collars.md"
