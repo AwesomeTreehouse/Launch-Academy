@@ -1,0 +1,49 @@
+<div>New House Form</div>
+
+<% if @house.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@house.errors.count, "error") %></h2>
+
+      <ul>
+      <% @house.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= form_for @house do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :address %>
+    <%= f.text_area :address %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :city %>
+    <%= f.text_area :city %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :state %>
+    <%= f.text_area :state %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :zip %>
+    <%= f.text_area :zip %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </fieldset>
+
+  <%= f.submit "Add House" %>
+<% end  %>
+
+<h6>If you're not blow away by the sheer beauty of this form then you have no soul.</h6>
